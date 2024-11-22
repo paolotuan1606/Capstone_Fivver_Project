@@ -1,0 +1,31 @@
+.groupBtnExplore {
+  max-width: 90%;
+  margin: 0 auto;
+  .btnExplor {
+    padding: 16px 20px;
+    border-radius: 40px;
+    background-color: #efeff0;
+    &:hover {
+      border-color: #efeff0 !important;
+      background-color: #dbdbdb !important;
+      color: black !important; /* Màu chữ khi hover */
+      box-shadow: none; /* Loại bỏ box-shadow */
+    }
+
+    &:focus {
+      outline: none; /* Loại bỏ outline khi focus */
+      box-shadow: none; /* Loại bỏ box-shadow */
+    }
+  }
+}
+
+.seeMore {
+  margin-top: 16px !important;
+}
+
+.exploreContent {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-top: 1px solid rgba(128, 128, 128, 0.285);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.285);
+}

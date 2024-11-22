@@ -6,6 +6,7 @@ import React, { createContext, Suspense } from "react";
 
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ListJobTemplate from "./pages/ListJobTemplate/ListJobTemplate";
 
 export const NotificationContext = createContext();
 
@@ -20,13 +21,22 @@ const ManagerJob = React.lazy(() => import("./pages/ManagerJob/ManagerJob"));
 
 const arrRoutes = [
   {
-    path: pathDefault.homePage,
+    path: "/",
     element: (
       <Suspense>
         <HomeTemplate />
       </Suspense>
     ),
-    children: [],
+    children: [
+      {
+        path: "list-job/:detailTypeJobID",
+        element: (
+          <Suspense>
+            <ListJobTemplate />
+          </Suspense>
+        ),
+      },
+    ],
   },
   {
     path: pathDefault.signIn,

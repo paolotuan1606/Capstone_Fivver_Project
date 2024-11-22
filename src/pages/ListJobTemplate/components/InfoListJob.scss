@@ -1,0 +1,46 @@
+.infoListJob {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.carouselInfoListJob {
+  position: relative;
+  .owl-nav {
+    .owl-prev {
+      position: absolute;
+      top: -50px;
+      right: 32px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid gray !important;
+    }
+    .owl-next {
+      position: absolute;
+      top: -50px;
+      right: -10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid gray !important;
+    }
+  }
+}
+
+.btnLogo {
+  border-color: #d9d9d9; /* Màu viền mặc định */
+  color: #333; /* Màu chữ mặc định */
+  transition: all 0.3s ease;
+  border-radius: 40px;
+  &:hover {
+    border-color: black !important; /* Màu viền khi hover */
+    color: black !important; /* Màu chữ khi hover */
+    box-shadow: none; /* Loại bỏ box-shadow */
+  }
+
+  &:focus {
+    outline: none; /* Loại bỏ outline khi focus */
+    box-shadow: none; /* Loại bỏ box-shadow */
+  }
+}

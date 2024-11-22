@@ -15,6 +15,7 @@ import { Dropdown } from "antd";
 import "./headerTemplate.scss";
 import { useSelector } from "react-redux";
 import useViewPort from "../../../hooks/useViewPort";
+import ListJobBarTemplate from "../../../pages/ListJobTemplate/components/ListJobBarTemplate";
 
 const HeaderTemplate = () => {
   const { width } = useViewPort();
@@ -127,6 +128,7 @@ const HeaderTemplate = () => {
           </div>
         </div>
       </div>
+      <ListJobBarTemplate />
     </header>
   ) : (
     <div></div>
