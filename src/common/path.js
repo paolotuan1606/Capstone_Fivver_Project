@@ -1,5 +1,6 @@
 export const pathDefault = {
   homePage: "/",
+  listJob: "/list-job/:detailTypeJobID",
   signIn: "/sign-in",
   signUp: "/sign-up",
   admin: "/admin",
