@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { pathDefault } from "../../../common/path";
 import { HomeOutlined } from "@ant-design/icons";
 import OwlCarousel from "react-owl-carousel";
@@ -9,6 +9,7 @@ import { Button } from "antd";
 import "./InfoListJob.scss";
 
 const InfoListJob = ({ typeJobDetail }) => {
+  const location = useLocation();
   const nextIcon = `<i class="fa-solid fa-angle-right"></i>`;
   const prevIcon = `<i class="fa-solid fa-angle-left"></i>`;
   return (
@@ -18,7 +19,7 @@ const InfoListJob = ({ typeJobDetail }) => {
           <HomeOutlined />
         </NavLink>
         <span>/</span>
-        <NavLink to={pathDefault.homePage}>{typeJobDetail}</NavLink>
+        <NavLink to={location.search}>{typeJobDetail}</NavLink>
       </div>
       <h1 className="text-3xl font-bold ">{typeJobDetail}</h1>
       <p className="text-slate-400">
