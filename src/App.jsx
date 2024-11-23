@@ -7,7 +7,7 @@ import React, { createContext, Suspense } from "react";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ListJobTemplate from "./pages/ListJobTemplate/ListJobTemplate";
-import JobDetail from "./pages/JobDetailTemplate/JobDetail";
+import JobDetailTemPlate from "./pages/JobDetailTemplate/JobDetailTemplate";
 
 export const NotificationContext = createContext();
 
@@ -38,10 +38,10 @@ const arrRoutes = [
         ),
       },
       {
-        path: "job/:job-id",
+        path: "job/:jobid",
         element: (
           <Suspense>
-            <JobDetail />
+            <JobDetailTemPlate />
           </Suspense>
         ),
       },
