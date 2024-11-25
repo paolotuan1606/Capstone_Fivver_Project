@@ -1,0 +1,69 @@
+.carouselJobDetail {
+  margin-left: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  .owl-nav {
+    .disabled {
+      visibility: hidden;
+    }
+    .owl-prev {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background-color: rgba(255, 255, 255, 0.522) !important;
+      top: 0;
+      i {
+        color: black;
+      }
+    }
+    .owl-next {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 28px;
+      height: 28px;
+      background-color: rgba(255, 255, 255, 0.522) !important;
+      i {
+        color: black;
+      }
+    }
+  }
+}
+
+.carouselJobImg {
+  img {
+    height: 450px;
+  }
+  .owl-nav {
+    .disabled {
+      visibility: hidden;
+    }
+    .owl-prev {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white !important;
+      border: 1px solid rgb(209, 206, 206) !important;
+
+      top: 200px;
+      left: 20px;
+      i {
+        color: gray;
+      }
+    }
+    .owl-next {
+      position: absolute;
+      top: 200px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white !important;
+      border: 1px solid rgb(209, 206, 206) !important;
+      i {
+        color: gray;
+      }
+    }
+  }
+}

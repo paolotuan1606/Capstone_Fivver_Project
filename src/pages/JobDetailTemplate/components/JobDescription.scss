@@ -1,0 +1,9 @@
+.btnContact {
+  background-color: #fff;
+  border: 1px solid black;
+  transition: all 0.5s;
+  &:hover {
+    background-color: black !important;
+    color: white !important;
+  }
+}

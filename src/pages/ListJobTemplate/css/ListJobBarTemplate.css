@@ -1,0 +1,36 @@
+.carouselListJobBar .owl-nav .disabled {
+  visibility: hidden;
+}
+.carouselListJobBar .owl-nav .owl-prev {
+  position: absolute;
+  top: -5px;
+  left: -40px;
+  width: 40px;
+  height: 40px;
+  background: black !important;
+}
+.carouselListJobBar .owl-nav .owl-prev i {
+  color: white;
+}
+.carouselListJobBar .owl-nav .owl-next {
+  position: absolute;
+  top: -5px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  background: black !important;
+}
+.carouselListJobBar .owl-nav .owl-next i {
+  color: white;
+}
+
+.ant-dropdown-menu-item:hover {
+  background: none !important;
+}
+
+.ant-dropdown-menu-item {
+  cursor: unset !important;
+}
+.ant-dropdown-menu-item a {
+  color: black;
+}/*# sourceMappingURL=ListJobBarTemplate.css.map */

@@ -1,0 +1,34 @@
+.ant-collapse {
+  background-color: transparent;
+  .ant-collapse-header {
+    .ant-collapse-header-text {
+      color: #62646a;
+    }
+  }
+}
+.progress {
+  padding: 6px;
+  background: rgba(128, 128, 128, 0.29);
+  border-radius: 6px;
+  .progress-bar {
+    width: 90%;
+    height: 10px;
+    background-color: #fffb00;
+    border-radius: 4px;
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+  }
+
+  .progress-bar2 {
+    width: 50%;
+  }
+  .progress-bar3 {
+    width: 50%;
+  }
+  .progress-bar4 {
+    width: 10%;
+  }
+  .progress-bar5 {
+    width: 10%;
+  }
+}

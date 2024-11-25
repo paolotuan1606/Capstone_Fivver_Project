@@ -1,0 +1,35 @@
+.guideCarousel {
+  position: relative;
+}
+.guideCarousel .item {
+  transition: all 0.5s;
+}
+.guideCarousel .item img {
+  height: 320px;
+  width: 460px;
+}
+.guideCarousel .owl-nav .disabled {
+  visibility: hidden;
+}
+.guideCarousel .owl-nav .owl-prev {
+  width: 40px;
+  height: 40px;
+  top: 140px;
+  left: 0;
+  background-color: white !important;
+  border-radius: 50%;
+  position: absolute;
+  color: black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.guideCarousel .owl-nav .owl-next {
+  top: 140px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: white !important;
+  border-radius: 50%;
+  position: absolute;
+  color: black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}/*# sourceMappingURL=Guide.css.map */
