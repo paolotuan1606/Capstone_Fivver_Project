@@ -1,0 +1,62 @@
+.typeJobDetail {
+  position: relative;
+  transition: all 0.5s !important;
+}
+.typeJobDetail .jobImg {
+  position: relative;
+  overflow: hidden;
+}
+.typeJobDetail .jobImg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 100%);
+  transform: skewX(-30deg);
+  transition: all 0.5s ease-in-out;
+}
+.typeJobDetail .typeJobDetail_icon .icon {
+  width: 50px;
+  height: 40px;
+  visibility: hidden;
+  opacity: 0;
+}
+.typeJobDetail .typeJobDetail_icon .icon:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+.typeJobDetail .typeJobDetail_icon .iconLike {
+  transform: translateY(20px);
+  transition: transform 0.2s;
+}
+.typeJobDetail .typeJobDetail_icon .iconShare {
+  transform: translateY(30px);
+  transition: transform 0.4s;
+}
+.typeJobDetail .typeJobDetail_icon .iconPlus {
+  transform: translateY(40px);
+  transition: transform 0.7s;
+}
+.typeJobDetail:hover .jobImg::before {
+  left: 100%;
+}
+.typeJobDetail:hover .jobName {
+  text-decoration: underline;
+}
+.typeJobDetail:hover .typeJobDetail_icon .icon {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.typeJobDetail:hover .typeJobDetail_icon .iconLike {
+  transform: translateY(0);
+}
+.typeJobDetail:hover .typeJobDetail_icon .iconShare {
+  transform: translateY(0);
+}
+.typeJobDetail:hover .typeJobDetail_icon .iconPlus {
+  transform: translateY(0);
+}/*# sourceMappingURL=Jobs.css.map */

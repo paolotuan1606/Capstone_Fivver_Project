@@ -2,6 +2,7 @@ import { HomeOutlined, StarFilled } from "@ant-design/icons";
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { pathDefault } from "../../../common/path";
+import "./HeaderJobDetailTemplate.scss";
 
 const HeaderJobDetailTemplate = ({
   tenLoaiCongViec,
@@ -16,7 +17,7 @@ const HeaderJobDetailTemplate = ({
 }) => {
   const location = useLocation();
   return (
-    <div className="py-7 space-y-7">
+    <div className="HeaderJobDetailContent py-7 space-y-7">
       <div className="space-x-4">
         <NavLink to={pathDefault.homePage}>
           <HomeOutlined />

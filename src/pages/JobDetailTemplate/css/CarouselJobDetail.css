@@ -1,0 +1,29 @@
+.carouselJobDetail {
+  margin-left: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.carouselJobDetail .owl-nav .disabled {
+  visibility: hidden;
+}
+.carouselJobDetail .owl-nav .owl-prev {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.522) !important;
+  top: 0;
+}
+.carouselJobDetail .owl-nav .owl-prev i {
+  color: black;
+}
+.carouselJobDetail .owl-nav .owl-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.522) !important;
+}
+.carouselJobDetail .owl-nav .owl-next i {
+  color: black;
+}/*# sourceMappingURL=CarouselJobDetail.css.map */
