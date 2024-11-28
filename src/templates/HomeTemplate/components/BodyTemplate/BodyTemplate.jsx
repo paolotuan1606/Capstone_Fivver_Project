@@ -1,11 +1,5 @@
 import React from "react";
-import "./bodyTemplate.scss";
-import InputSearch from "../../../../components/input/inputSearch/InputSearch";
-import { Dropdown } from "antd";
-import { useDebounce } from "use-debounce";
-import { CongViecService } from "../../../../services/congViec.service";
-import Icons from "../../../../components/Icons";
-import HeadBanner from "./components/headBanner/HeadBanner";
+import HeadBanner from "./components/HeadBanner/HeadBanner";
 import JobItemCart from "./components/JobItemCart/JobItemCart";
 import Guides from "./components/Guides/Guides";
 import PopularService from "./components/PopularService/PopularService";
@@ -14,6 +8,7 @@ import FivverVideo from "./components/FivverVideo/FivverVideo";
 import GotoService from "./components/GotoService/GotoService";
 import LogoBanner from "./components/LogoBanner/LogoBanner";
 import JobList from "./components/JobList/JobList";
+import "./bodyTemplate.scss";
 
 const BodyTemplate = () => {
   return (
