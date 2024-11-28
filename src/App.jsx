@@ -8,6 +8,8 @@ import { Bounce, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ListJobTemplate from "./pages/ListJobTemplate/ListJobTemplate";
 import JobDetailTemPlate from "./pages/JobDetailTemplate/JobDetailTemplate";
+import BodyTemplate from "./templates/HomeTemplate/components/BodyTemplate/BodyTemplate";
+import ListJobByName from "./pages/ListJobByName/ListJobByName";
 
 export const NotificationContext = createContext();
 
@@ -29,6 +31,22 @@ const arrRoutes = [
       </Suspense>
     ),
     children: [
+      {
+        path: "/",
+        element: (
+          <Suspense>
+            <BodyTemplate />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/list-job-on-kind",
+        element: (
+          <Suspense>
+            <ListJobByName />
+          </Suspense>
+        ),
+      },
       {
         path: "list-job/:detailTypeJobID",
         element: (
