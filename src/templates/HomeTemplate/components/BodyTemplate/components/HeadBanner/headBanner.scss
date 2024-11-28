@@ -1,0 +1,40 @@
+.banner {
+  background-image: url(./public/head_banner.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  background-position: top;
+  .head_banner {
+    height: 400px !important;
+  }
+
+  .ant-input-group {
+    position: relative;
+    input {
+      height: 55px !important;
+      border-radius: 10px !important;
+    }
+  }
+  .ant-input-group-addon {
+    inset-inline-start: unset !important;
+    position: absolute !important;
+    right: 5px !important;
+    top: 5px !important;
+    z-index: 100;
+    width: 45px !important;
+    height: 45px !important;
+    button {
+      background-color: #013a12 !important;
+      border-color: #013a12 !important;
+      border-radius: 10px !important;
+      .anticon-search {
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+.dropdown-suggest {
+  max-width: 660px;
+  min-width: unset !important;
+  inset: 434px auto auto 365px;
+}

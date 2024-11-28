@@ -4,4 +4,7 @@ export const CongViecService = {
   getCongViecTheoTen: (key) => {
     return http.get(`/cong-viec/lay-danh-sach-cong-viec-theo-ten/${key}`);
   },
+  getChiTietLoaiCongViec: (id) => {
+    return http.get(`/cong-viec/lay-chi-tiet-loai-cong-viec/${id}`);
+  },
 };

@@ -1,0 +1,23 @@
+.svg {
+  :hover {
+    fill: #e5e7eb;
+    cursor: pointer;
+    circle {
+      cx: 0;
+      cy: 0;
+      r: 0;
+    }
+  }
+}
+.footer-detail {
+  ul {
+    a {
+      &:hover {
+        text-decoration: underline !important;
+      }
+      p {
+        color: #9d9fa2;
+      }
+    }
+  }
+}

@@ -6,4 +6,5 @@ export const pathDefault = {
   managerUser: "/admin/manager-user",
   managerJob: "/admin/manager-job",
   managerComment: "/admin/manager-comment",
+  jobListOnKind: "/job-list-on-kind",
 };

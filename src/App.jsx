@@ -6,6 +6,8 @@ import React, { createContext, Suspense } from "react";
 
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import BodyTemplate from "./templates/HomeTemplate/components/BodyTemplate/BodyTemplate";
+import ListJobByName from "./pages/ListJobByName/ListJobByName";
 
 export const NotificationContext = createContext();
 
@@ -26,7 +28,20 @@ const arrRoutes = [
         <HomeTemplate />
       </Suspense>
     ),
-    children: [],
+    children: [
+      {
+        index: true,
+        element: <BodyTemplate />,
+      },
+      {
+        path: "/",
+        element: <BodyTemplate />,
+      },
+      {
+        path: "/job-list-on-kind",
+        element: <ListJobByName />,
+      },
+    ],
   },
   {
     path: pathDefault.signIn,

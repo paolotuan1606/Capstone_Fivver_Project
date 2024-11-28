@@ -1,7 +1,8 @@
-import React from 'react'
-import HeaderTemplate from './components/HeaderTemplate'
-import { Outlet } from 'react-router-dom'
-import FooterTemplate from './components/FooterTemplate'
+import React from "react";
+import HeaderTemplate from "./components/HeaderTemplate";
+import { Outlet } from "react-router-dom";
+import FooterTemplate from "./components/FooterTemplate";
+import BodyTemplate from "./components/BodyTemplate/BodyTemplate";
 
 const HomeTemplate = () => {
   return (
@@ -10,7 +11,7 @@ const HomeTemplate = () => {
       <Outlet />
       <FooterTemplate />
     </>
-  )
-}
+  );
+};
 
-export default HomeTemplate
+export default HomeTemplate;

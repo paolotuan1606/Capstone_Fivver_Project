@@ -76,8 +76,8 @@ const HeaderTemplate = () => {
     });
   }, [listSearch]);
   return width > 576 ? (
-    <header className="py-4 border-b border-b-gray-200">
-      <div className="container">
+    <header className="py-4 border-b border-b-gray-200 px-8">
+      <div className="container mx-auto">
         <div className="header_content flex items-center justify-between">
           {/* // logo  */}
           <div className="flex flex-1 space-x-2 items-center">
