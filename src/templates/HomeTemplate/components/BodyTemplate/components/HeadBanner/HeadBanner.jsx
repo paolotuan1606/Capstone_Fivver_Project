@@ -7,50 +7,50 @@ import InputSearch from "../../../../../../components/input/inputSearch/InputSea
 import "./headBanner.scss";
 
 const HeadBanner = () => {
-  const [key, setKey] = useState("");
-  const [value] = useDebounce(key, 1000);
-  const [openDropdown, setOpenDropdown] = useState(false);
-  const [listSearch, setListSearch] = useState([]);
-  const handleChangeKey = (event) => {
-    setKey(event.target.value);
-  };
+  // const [key, setKey] = useState("");
+  // const [value] = useDebounce(key, 1000);
+  // const [openDropdown, setOpenDropdown] = useState(false);
+  // const [listSearch, setListSearch] = useState([]);
+  // const handleChangeKey = (event) => {
+  //   setKey(event.target.value);
+  // };
 
-  const handleClick = () => {
-    setOpenDropdown(true);
-  };
-  useEffect(() => {
-    if (value) {
-      CongViecService.getCongViecTheoTen(value)
-        .then((res) => {
-          setListSearch(res.data.content);
-          console.log(res);
-          setOpenDropdown(true);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
-  }, [value]);
-  const itemListSearch = useMemo(() => {
-    return listSearch.slice(0, 4).map((item, index) => {
-      return {
-        key: item.id,
-        label: (
-          <div className="flex items-center">
-            <img
-              src={item.congViec.hinhAnh}
-              className="w-16 h-16 me-3"
-              alt=""
-            />
-            <div>
-              <h4 className="">{item.congViec.tenCongViec}</h4>
-              <p>{item.congViec.danhGia}</p>
-            </div>
-          </div>
-        ),
-      };
-    });
-  }, [listSearch]);
+  // const handleClick = () => {
+  //   setOpenDropdown(true);
+  // };
+  // useEffect(() => {
+  //   if (value) {
+  //     CongViecService.getCongViecTheoTen(value)
+  //       .then((res) => {
+  //         setListSearch(res.data.content);
+  //         console.log(res);
+  //         setOpenDropdown(true);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   }
+  // }, [value]);
+  // const itemListSearch = useMemo(() => {
+  //   return listSearch.slice(0, 4).map((item, index) => {
+  //     return {
+  //       key: item.id,
+  //       label: (
+  //         <div className="flex items-center">
+  //           <img
+  //             src={item.congViec.hinhAnh}
+  //             className="w-16 h-16 me-3"
+  //             alt=""
+  //           />
+  //           <div>
+  //             <h4 className="">{item.congViec.tenCongViec}</h4>
+  //             <p>{item.congViec.danhGia}</p>
+  //           </div>
+  //         </div>
+  //       ),
+  //     };
+  //   });
+  // }, [listSearch]);
   return (
     <div className="banner">
       <div className="head_banner text-center text-white flex justify-center items-center">
@@ -61,19 +61,19 @@ const HeadBanner = () => {
           </h1>
           <Dropdown
             overlayClassName="dropdown-suggest"
-            menu={{
-              items: itemListSearch,
-              onMouseLeave: () => {
-                setOpenDropdown(false);
-              },
-            }}
-            open={openDropdown}
+            // menu={{
+            //   items: itemListSearch,
+            //   onMouseLeave: () => {
+            //     setOpenDropdown(false);
+            //   },
+            // }}
+            // open={openDropdown}
           >
             <div className="w-full">
               <InputSearch
-                handleClick={handleClick}
-                handleChange={handleChangeKey}
-                value={key}
+                // handleClick={handleClick}
+                // handleChange={handleChangeKey}
+                // value={key}
                 placeholder={"Search for any service..."}
               />
             </div>
