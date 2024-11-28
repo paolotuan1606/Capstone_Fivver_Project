@@ -26,6 +26,7 @@ const ListJobByName = () => {
           How Fiverr Works
         </button>
       </div> */}
+      <div>handleNotification</div>
     </div>
   );
 };
