@@ -18,7 +18,7 @@ const Guides = () => {
         <Slider {...settings}>
           <div className="space-y-5 mr-4 cursor-pointer">
             <img
-              src="./public/guide-img/side hustle.jpeg"
+              src="./public/guide-img/side-hustle.jpeg"
               className="rounded-xl w-96 h-60"
               alt=""
             />
@@ -34,7 +34,7 @@ const Guides = () => {
           </div>
           <div className="space-y-5 mr-4 cursor-pointer">
             <img
-              src="./public/guide-img/home based online business-fiverr.jpg"
+              src="./public/guide-img/home-based-online-business-fiverr.jpg"
               className="rounded-xl w-96 h-60"
               alt=""
             />
@@ -52,7 +52,7 @@ const Guides = () => {
           </div>
           <div className="space-y-5 mr-4 cursor-pointer">
             <img
-              src="./public/guide-img/05 - Article Cover.jpg"
+              src="./public/guide-img/05-Article Cover.jpg"
               className="rounded-xl w-96 h-60"
               alt=""
             />
@@ -60,7 +60,7 @@ const Guides = () => {
           </div>
           <div className="space-y-5 mr-4 cursor-pointer">
             <img
-              src="./public/guide-img/business logo design-fiverr guide.jpg"
+              src="./public/guide-img/business-logo-design-fiverr-guide.jpg"
               className="rounded-xl w-80  h-60"
               alt=""
             />
