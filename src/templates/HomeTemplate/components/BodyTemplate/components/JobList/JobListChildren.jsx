@@ -6,7 +6,7 @@ const JobListChildren = ({ img }) => {
   return (
     <div className="rounded-lg relative w-full overflow-hidden">
       <img
-        src={`./public/job-list-img/${img}.jpg`}
+        src={`./job-list-img/${img}.jpg`}
         className="w-full h-auto rounded-lg"
         alt=""
       />
