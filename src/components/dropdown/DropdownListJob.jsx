@@ -1,9 +1,10 @@
 import { Dropdown, Menu } from "antd";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { pathDefault } from "../../common/path";
 
-const DropdownListJob = ({ dropDownContent, menuGroups }) => {
+const DropdownListJob = ({ dropDownId, dropDownContent, menuGroups }) => {
+  const navigate = useNavigate();
   const items = menuGroups.map((group) => ({
     key: group.id,
     label: (
@@ -37,7 +38,14 @@ const DropdownListJob = ({ dropDownContent, menuGroups }) => {
   return (
     <div className="cursor-pointer">
       <Dropdown menu={menu}>
-        <NavLink onClick={(e) => e.preventDefault()}>{dropDownContent}</NavLink>
+        <NavLink
+          to={`./list-job-on-kind/${dropDownId}`}
+          // onClick={(e) =>
+          //   e.preventDefault(navigate(`./list-job-on-kind/${dropDownId}`))
+          // }
+        >
+          {dropDownContent}
+        </NavLink>
       </Dropdown>
     </div>
   );

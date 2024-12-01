@@ -19,17 +19,17 @@ import ListJobBarTemplate from "../../../pages/ListJobTemplate/components/ListJo
 
 const HeaderTemplate = () => {
   const { width } = useViewPort();
-  console.log(width);
+  // console.log(width);
 
   const [key, setKey] = useState("");
   const [value] = useDebounce(key, 1000);
   const [openDropdown, setOpenDropdown] = useState(false);
   const [listSearch, setListSearch] = useState([]);
   const navigate = useNavigate();
-  console.log(key);
+  // console.log(key);
 
   const { user } = useSelector((state) => state.userSlice);
-  console.log(user);
+  // console.log(user);
 
   const handleChangeKey = (event) => {
     setKey(event.target.value);
@@ -77,8 +77,8 @@ const HeaderTemplate = () => {
     });
   }, [listSearch]);
   return width > 576 ? (
-    <header className="py-4 border-b border-b-gray-200">
-      <div className="container">
+    <header className="container 2xl:container border-b-gray-200 border-b bg-white z-30 w-full py-4">
+      <div className="">
         <div className="header_content flex items-center justify-between">
           {/* // logo  */}
           <div className="flex flex-1 space-x-2 items-center">
@@ -107,13 +107,14 @@ const HeaderTemplate = () => {
           </div>
           {/* search input  */}
           <div className="header_action space-x-1">
-            <DropdownHeader buttonContent="Fiverr Pro" />
-            <DropdownHeader buttonContent="Explore" />
-            <ButtonGhost content={"English"} icon={<GlobalOutlined />} />
-            <ButtonGhost content={"Become a Seller"} />
-
+            <div className="inline hidden lg:inline">
+              <DropdownHeader buttonContent="Fiverr Pro" />
+              <DropdownHeader buttonContent="Explore" />
+              <ButtonGhost content={"English"} icon={<GlobalOutlined />} />
+              <ButtonGhost content={"Become a Seller"} />
+            </div>
             {!user ? (
-              <>
+              <div className="inline">
                 <ButtonGhost content={"Sign In"} />
                 <ButtonOutline
                   onClick={() => {
@@ -121,14 +122,14 @@ const HeaderTemplate = () => {
                   }}
                   content={"Join"}
                 />
-              </>
+              </div>
             ) : (
               <p className="inline-block w-max">{user.name}</p>
             )}
           </div>
         </div>
+        <ListJobBarTemplate />
       </div>
-      <ListJobBarTemplate />
     </header>
   ) : (
     <div></div>

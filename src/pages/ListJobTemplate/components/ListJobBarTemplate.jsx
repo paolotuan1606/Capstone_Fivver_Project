@@ -5,6 +5,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./ListJobBarTemplate.scss";
+import { NavLink } from "react-router-dom";
 
 const ListJobBarTemplate = () => {
   const [listLoaiCongViec, setListLoaiCongViec] = useState([]);
@@ -55,6 +56,7 @@ const ListJobBarTemplate = () => {
           {listLoaiCongViec.map((loaiCongViec) => (
             <div key={loaiCongViec.id} className="item text-lg">
               <DropdownListJob
+                dropDownId={loaiCongViec.id}
                 dropDownContent={loaiCongViec.tenLoaiCongViec}
                 menuGroups={
                   Array.isArray(loaiCongViec.dsNhomChiTietLoai)

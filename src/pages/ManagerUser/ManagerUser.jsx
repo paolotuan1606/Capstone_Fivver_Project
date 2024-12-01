@@ -106,9 +106,16 @@ const ManagerUser = () => {
               okText="Yes"
               cancelText="No"
             >
-              <Button danger>Xóa</Button>
+              <Button
+                danger
+                className="hover:!bg-red-500 hover:!text-white  hover:!border-red-500"
+              >
+                Xóa
+              </Button>
             </Popconfirm>
-            <Button className="border-yellow-500 text-yellow-500">Sửa</Button>
+            <Button className="border-yellow-500 text-yellow-500 hover:!text-white hover:!bg-yellow-500 hover:!border-yellow-500">
+              Sửa
+            </Button>
           </div>
         );
       },
@@ -137,7 +144,7 @@ const ManagerUser = () => {
         }}
         size="large"
         variant="solid"
-        className="bg-green-500 text-white "
+        className="bg-green-500 text-white hover:!text-green-500 hover:!border-green-500 "
       >
         Thêm người dùng
       </Button>

@@ -40,7 +40,7 @@ const arrRoutes = [
         ),
       },
       {
-        path: "/list-job-on-kind",
+        path: "list-job-on-kind/:id",
         element: (
           <Suspense>
             <ListJobByName />
