@@ -107,7 +107,7 @@ const HeaderTemplate = () => {
           </div>
           {/* search input  */}
           <div className="header_action space-x-1">
-            <div className="inline hidden lg:inline">
+            <div className=" hidden lg:inline">
               <DropdownHeader buttonContent="Fiverr Pro" />
               <DropdownHeader buttonContent="Explore" />
               <ButtonGhost content={"English"} icon={<GlobalOutlined />} />

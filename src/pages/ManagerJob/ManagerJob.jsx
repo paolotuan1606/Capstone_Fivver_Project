@@ -1,7 +1,7 @@
 import { Avatar, Button, Modal, Popconfirm, Table } from "antd";
 import React, { useContext, useEffect, useState } from "react";
 import { NotificationContext } from "../../App";
-import FormAddJob from "./components/formAddjob/formAddJob";
+import FormAddJob from "./components/FormAddjob/FormAddJob";
 import { CongViecService } from "../../services/congViec.service";
 
 const ManagerJob = () => {
