@@ -42,7 +42,8 @@ const FormAddUser = ({ handleCloseModal, layDanhSachNguoiDung }) => {
           handleNotification("success", "Thêm người dùng thành công!");
         })
         .catch((err) => {
-          console.log(err);
+          console.log(err.response.data.content);
+          handleNotification("error", err.response.data.content);
         });
     },
   });

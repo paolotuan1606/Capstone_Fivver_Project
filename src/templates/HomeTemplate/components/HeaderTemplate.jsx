@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import Icons from "../../../components/Icons";
 import { Link, useNavigate } from "react-router-dom";
 import { pathDefault } from "../../../common/path";
@@ -7,17 +7,24 @@ import {
   ButtonGhost,
   ButtonOutline,
 } from "../../../components/button/ButtonCustom";
-import { GlobalOutlined, SmileOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  GlobalOutlined,
+  SmileOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 import InputSearch from "../../../components/input/inputSearch/InputSearch";
 import { CongViecService } from "../../../services/congViec.service";
 import { useDebounce } from "use-debounce";
-import { Dropdown } from "antd";
+import { Avatar, Dropdown, Space } from "antd";
 import "./headerTemplate.scss";
 import { useSelector } from "react-redux";
 import useViewPort from "../../../hooks/useViewPort";
 import ListJobBarTemplate from "../../../pages/ListJobTemplate/components/ListJobBarTemplate";
+import { NotificationContext } from "../../../App";
 
 const HeaderTemplate = () => {
+  const handleNotification = useContext(NotificationContext);
   const { width } = useViewPort();
   // console.log(width);
 
@@ -76,6 +83,7 @@ const HeaderTemplate = () => {
       };
     });
   }, [listSearch]);
+
   return width > 576 ? (
     <header className="container 2xl:container border-b-gray-200 border-b bg-white z-30 w-full py-4">
       <div className="">
@@ -124,7 +132,32 @@ const HeaderTemplate = () => {
                 />
               </div>
             ) : (
-              <p className="inline-block w-max">{user.name}</p>
+              <>
+                {}
+                {/* <p className="inline-block w-max">{user.name}</p> */}
+                {/* <Dropdown
+                  menu={{
+                    items: [
+                      {
+                        key: 1,
+                        label:
+                          user.role == "ADMIN" ? (
+                            <Link onClick={() => {}}>Trang quản trị</Link>
+                          ) : (
+                            (handleNotification(
+                              "error",
+                              "Bạn không đủ quyền truy cập"
+                            ),
+                            navigate(pathDefault.homePage))
+                          ),
+                      },
+                    ],
+                  }}
+                >
+                  
+                </Dropdown> */}
+                <Avatar size={50} icon={<UserOutlined />} />
+              </>
             )}
           </div>
         </div>

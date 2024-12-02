@@ -54,7 +54,7 @@ const HeadBanner = () => {
   return (
     <div className="banner rounded-2xl  ">
       <div className="head_banner text-center h-3/4 text-white flex justify-center items-center ">
-        <div className="space-y-12 sm:space-y-3">
+        <div className="md:space-y-12 sm:space-y-3">
           <h1 className="lg:text-6xl md:text-5xl sm:text-2xl">
             Scale your professional <br /> workforce with
             <span className=""> freelancers</span>
