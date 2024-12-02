@@ -2,7 +2,6 @@ import { http } from "./config";
 
 const dataLocal = localStorage.getItem("userInfo");
 const dataUser = JSON.parse(dataLocal);
-console.log(dataUser.token);
 
 export const CongViecService = {
   getCongViecTheoTen: (key) => {
