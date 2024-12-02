@@ -10,9 +10,9 @@ const JobListChildren = ({ img }) => {
         className="w-full h-auto rounded-lg"
         alt=""
       />
-      <div className="absolute top-0 left-0  bottom-0 rounded-lg flex p-4 justify-between flex-col-reverse items-end">
+      <div className="absolute top-0 left-0 bottom-0 rounded-lg flex p-4 justify-between flex-col-reverse items-end">
         <div className="content flex justify-between items-center">
-          <div className="text-white">
+          <div className="text-white text-base ">
             <p>
               Featured in:{" "}
               <span className="font-medium">
@@ -23,11 +23,11 @@ const JobListChildren = ({ img }) => {
               by: <span className="by font-medium">bapzozo</span>
             </p>
           </div>
-          <div className="dots cursor-pointer text-white text-3xl px-2 py-1  rounded-full transition-all">
+          <div className="dots cursor-pointer text-white lg:text-3xl sm:text-base px-2 py-1   rounded-full transition-all">
             <EllipsisOutlined />
           </div>
         </div>
-        <div className="icon px-3 py-2 bg-slate-100 rounded-full">
+        <div className="icon px-3 py-2 bg-slate-100 rounded-full lg:text-base ">
           <HeartOutlined />
         </div>
       </div>

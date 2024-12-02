@@ -37,14 +37,14 @@ const ListJobByName = () => {
   return (
     <div className="container px-8 py-16 space-y-20">
       <div className="text-center  space-y-16 bg-blue-400 rounded-lg py-5 bg-[url('/public/job-list-banner.jpg')] bg-no-repeat bg-center bg-cover h-80 flex items-center justify-center flex-col text-white ">
-        <h2 className="text-5xl">{tenLoaiCongViec}</h2>
-        <button className="border border-solid rounded-md text-2xl hover:bg-white px-5 py-3 hover:text-orange-800 transition-all ">
+        <h2 className="lg:text-5xl sm:text-3xl">{tenLoaiCongViec}</h2>
+        <button className="border border-solid rounded-md lg:text-2xl sm:text-base hover:bg-white px-5 py-3 hover:text-orange-800 transition-all ">
           <i className="fa-solid fa-circle-play mr-3" />
           How Fiverr Works
         </button>
       </div>
       <div>
-        <h2 className="text-3xl font-semibold mb-10">
+        <h2 className="lg:text-3xl sm:text-2xl font-semibold mb-10">
           Most popular in {tenLoaiCongViec}
         </h2>
         <OwlCarousel
@@ -67,9 +67,9 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/cb63c6dd487dc1630100243adea2913e-1727009044224/Minimalist%20Logo%20Design.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">
+              <span className="md:text-base sm:text-sm  font-medium">
                 Minimalist Logo Design
               </span>
               <SwapRightOutlined className="text-2xl" />
@@ -80,9 +80,11 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/8ab683c462bb7021359f813a67f0a210-1727008217023/Illustration.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">Illustration</span>
+              <span className="md:text-base sm:text-sm  font-medium">
+                Illustration
+              </span>
               <SwapRightOutlined className="text-2xl" />
             </Button>
           </div>
@@ -91,9 +93,11 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/a4f23e7ad88e3c639e545e7f1ef6c24c-1727084447011/Website%20Design.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">Website Design</span>
+              <span className="md:text-base sm:text-sm  font-medium">
+                Website Design
+              </span>
               <SwapRightOutlined className="text-2xl" />
             </Button>
           </div>
@@ -102,9 +106,9 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/bdd56de5c8d1b1aadcac9ec4b605f044-1726999157269/Architecture%20_%20Interior%20Design.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">
+              <span className="md:text-base sm:text-sm  font-medium">
                 Architecture & Interior Design
               </span>
               <SwapRightOutlined className="text-2xl" />
@@ -115,9 +119,11 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/bdd56de5c8d1b1aadcac9ec4b605f044-1726999157270/AI%20Artists.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">AI Artist</span>
+              <span className="md:text-base sm:text-sm  font-medium">
+                AI Artist
+              </span>
               <SwapRightOutlined className="text-2xl" />
             </Button>
           </div>
@@ -126,9 +132,11 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/8ab683c462bb7021359f813a67f0a210-1727008217021/Image%20Editing.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">Image Editing</span>
+              <span className="md:text-base sm:text-sm  font-medium">
+                Image Editing
+              </span>
               <SwapRightOutlined className="text-2xl" />
             </Button>
           </div>
@@ -137,9 +145,9 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/148a459235c2efcccf74882dd6790246-1727083583539/T-Shirts%20_%20Merchandise.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">
+              <span className="md:text-base sm:text-sm  font-medium">
                 T-Shirts & Merchandise
               </span>
               <SwapRightOutlined className="text-2xl" />
@@ -150,9 +158,9 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/8ab683c462bb7021359f813a67f0a210-1727008217020/Industrial%20_%20Product%20Design.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">
+              <span className="md:text-base sm:text-sm  font-medium">
                 Industrial & Product Design
               </span>
               <SwapRightOutlined className="text-2xl" />
@@ -163,9 +171,9 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/8ab683c462bb7021359f813a67f0a210-1727008217020/Industrial%20_%20Product%20Design.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">
+              <span className="md:text-base sm:text-sm  font-medium">
                 Industrial & Product Design
               </span>
               <SwapRightOutlined className="text-2xl" />
@@ -176,15 +184,17 @@ const ListJobByName = () => {
               <img
                 src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/148a459235c2efcccf74882dd6790246-1727083583524/Social%20Media%20Design.png"
                 alt=""
-                className="!w-16"
+                className="md:!w-16 sm:!w-10"
               />
-              <span className="text-base font-medium">Social Media Design</span>
+              <span className="md:text-base sm:text-sm  font-medium">
+                Social Media Design
+              </span>
               <SwapRightOutlined className="text-2xl" />
             </Button>
           </div>
         </OwlCarousel>
       </div>
-      <div className="flex justify-between items-center border border-solid rounded-lg p-10">
+      <div className="flex md:flex-row md:justify-between md:items-center sm:flex-col sm:gap-8 border border-solid rounded-lg p-10">
         <div className="left space-y-6">
           <h2 className="text-black text-3xl font-medium">
             Seeking a <span>full suite of services?</span>
@@ -222,10 +232,10 @@ const ListJobByName = () => {
         </div>
       </div>
       <div className="space-y-6">
-        <h1 className="text-3xl font-semibold mb-10">
+        <h1 className="lg:text-3xl sm:text-xl font-semibold mb-10">
           Explore {tenLoaiCongViec}
         </h1>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6">
           {dsNhomChiTietLoai
             ? dsNhomChiTietLoai.map((job) => {
                 return (
@@ -236,14 +246,16 @@ const ListJobByName = () => {
                         className="w-full max-h-40 object-cover rounded-md"
                         alt=""
                       />
-                      <h1 className="text-xl text-black font-bold">
+                      <h1 className="md:text-xl sm:text-base text-black font-bold">
                         {job.tenNhom}
                       </h1>
                       <div className="space-y-2">
                         {job.dsChiTietLoai.map((item) => {
                           return (
                             <div className="job-item flex justify-between items-center p-3 hover:bg-gray-100 rounded-md">
-                              <span>{item.tenChiTiet}</span>
+                              <span className="lg:text-base sm:text-sm">
+                                {item.tenChiTiet}
+                              </span>
                               <SwapRightOutlined className="arrow text-black opacity-0 align-middle" />
                             </div>
                           );

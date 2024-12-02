@@ -5,7 +5,7 @@ import "./fivverProBanner.scss";
 const FivverProBanner = () => {
   return (
     <div className="rounded-2xl p-10" style={{ backgroundColor: "#E8FAF4" }}>
-      <div className="grid grid-cols-2 p-10 gap-4">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 p-10 gap-4">
         <div>
           <h3>
             <svg
@@ -19,37 +19,46 @@ const FivverProBanner = () => {
               </g>
             </svg>
           </h3>
-          <h2 className="my-7 text-5xl ">
-            The <span>premium</span> freelance solution for businesses
+          <h2 className="my-7 md:text-5xl sm:text-3xl">
+            The <span className="text-green-500 font-span">premium</span>{" "}
+            freelance solution for businesses
           </h2>
           <div className="grid grid-cols-2 gap-5">
             <div className="space-y-1">
               <Icons.starCheck />
-              <h2 className="text-xl font-medium">Dedicated hiring experts</h2>
-              <p>
+              <h2 className="md:text-xl sm:text-base font-medium">
+                Dedicated hiring experts
+              </h2>
+              <p className="sm:text-sm">
                 Count on an account manager to find you the right talent and see
                 to your project’s every need.
               </p>
             </div>
             <div className="space-y-1">
               <Icons.starCheck />
-              <h2 className="text-xl font-medium">Satisfaction guarantee</h2>
-              <p>
+              <h2 className="md:text-xl sm:text-base font-medium">
+                Satisfaction guarantee
+              </h2>
+              <p className="sm:text-sm">
                 Order confidently, with guaranteed refunds for
                 less-than-satisfactory deliveries.
               </p>
             </div>
             <div className="space-y-1">
               <Icons.starCheck />
-              <h2 className="text-xl font-medium">Advanced management tools</h2>
-              <p>
+              <h2 className="md:text-xl sm:text-base font-medium">
+                Advanced management tools
+              </h2>
+              <p className="sm:text-sm">
                 Seamlessly integrate freelancers into your team and projects.
               </p>
             </div>
             <div className="space-y-1">
               <Icons.starCheck />
-              <h2 className="text-xl font-medium">Flexible payment models</h2>
-              <p>
+              <h2 className="md:text-xl sm:text-base font-medium">
+                Flexible payment models
+              </h2>
+              <p className="sm:text-sm">
                 Pay per project or opt for hourly rates to facilitate
                 longer-term collaboration.
               </p>
@@ -57,7 +66,7 @@ const FivverProBanner = () => {
           </div>
         </div>
         <img
-          src="./public/fivver-pro-banner/fiverr-pro.png"
+          src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_870,dpr_2.0/v1/attachments/generic_asset/asset/2321104e0c585cceea525419551d3a7c-1721984733469/fiverr-pro_2x.png"
           className="w-auto my-auto"
           alt=""
         />

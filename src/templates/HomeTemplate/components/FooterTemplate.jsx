@@ -13,7 +13,7 @@ import "./footerTemplate.scss";
 const FooterTemplate = () => {
   return (
     <div className="container my-2  px-10 space-y-5 mt-10">
-      <div className="footer-detail grid grid-cols-5">
+      <div className="footer-detail grid lg:grid-cols-5 md:grid-cols-3 md:gap-5 sm:grid-cols-3 sm:gap-3">
         <div className="space-y-3">
           <h3 className="font-bold">Categories</h3>
           <ul className="space-y-2 text-gray-500">
@@ -191,7 +191,7 @@ const FooterTemplate = () => {
         </div>
       </div>
       <hr />
-      <div className="footer-contact flex items-center justify-between text-gray-500">
+      <div className="footer-contact lg:flex lg:items-center lg:justify-between text-gray-500 sm:flex-wrap sm:space-y-4 ">
         <div className="flex items-center space-x-12">
           <Icons.footerLogo />
           <span className="text-gray-500">
@@ -199,8 +199,8 @@ const FooterTemplate = () => {
             Fiverr International Ltd. 2024
           </span>
         </div>
-        <div className="flex items-center space-x-10">
-          <div className="space-x-6">
+        <div className="flex items-center space-x-5 sm:justify-start">
+          <div className="space-x-2">
             <i className="fa-brands fa-tiktok text-xl py-2 px-3 rounded-full hover:bg-gray-200 duration-200 cursor-pointer " />
             <i className="fa-brands fa-instagram text-xl py-2 px-3 rounded-full hover:bg-gray-200 duration-200 cursor-pointer " />
             <i className="fa-brands fa-linkedin text-xl py-2 px-3 rounded-full hover:bg-gray-200 duration-200 cursor-pointer " />

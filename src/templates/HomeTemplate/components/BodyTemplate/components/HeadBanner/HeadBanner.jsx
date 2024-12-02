@@ -52,10 +52,10 @@ const HeadBanner = () => {
     });
   }, [listSearch]);
   return (
-    <div className="banner">
-      <div className="head_banner text-center text-white flex justify-center items-center">
-        <div className="space-y-12">
-          <h1 className="text-6xl">
+    <div className="banner rounded-2xl  ">
+      <div className="head_banner text-center h-3/4 text-white flex justify-center items-center ">
+        <div className="space-y-12 sm:space-y-3">
+          <h1 className="lg:text-6xl md:text-5xl sm:text-2xl">
             Scale your professional <br /> workforce with
             <span className=""> freelancers</span>
           </h1>
@@ -80,9 +80,9 @@ const HeadBanner = () => {
           </Dropdown>
         </div>
       </div>
-      <div className="banner-logo  text-gray-500 flex justify-center gap-5">
-        <span>Trusted by:</span>
-        <ul className="flex items-center gap-5">
+      <div className="banner-logo h-1/4  text-gray-500 flex justify-center lg:gap-5 sm:gap-2">
+        <span className="flex items-center sm:text-sm">Trusted by:</span>
+        <ul className="flex items-center lg:gap-5 md:gap-4 ">
           <li className=" text-gray-500">
             <Icons.meta />
           </li>

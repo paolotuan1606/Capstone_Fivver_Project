@@ -1,13 +1,15 @@
 .banner {
-  background-image: url(./public/head_banner.webp);
+  background-image: url(https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/84c449beda884aa8f9f72023e2d8b3fd-1705308514872/hero-lg-x1.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 450px;
   background-position: top;
-  .head_banner {
-    height: 400px !important;
+  @media (max-width: 1024px) {
+    height: 380px;
   }
-
+  @media (max-width: 767px) {
+    height: 250px;
+  }
   .ant-input-group {
     position: relative;
     input {

@@ -3,8 +3,10 @@ import React from "react";
 const FivverVideo = () => {
   return (
     <div className="space-y-5 my-14" style={{ color: "#404145" }}>
-      <h1 className="text-5xl">What success on Fiverr looks like</h1>
-      <p className="text-lg">
+      <h1 className="lg:text-5xl md:text-4xl sm:text-3xl">
+        What success on Fiverr looks like
+      </h1>
+      <p className="lg:text-lg sm:text-base">
         Vontélle Eyewear turns to Fiverr freelancers to bring their vision to
         life.
       </p>
