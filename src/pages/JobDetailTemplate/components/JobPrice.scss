@@ -1,0 +1,89 @@
+.jobPriceTab {
+  border: 1px solid rgba(128, 128, 128, 0.411);
+  .ant-tabs-nav {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin: 0 !important;
+  }
+
+  .ant-tabs-tab {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px 0;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 !important;
+    border: 1px solid rgba(128, 128, 128, 0.411);
+    .ant-tabs-tab-btn {
+      margin: 0 auto;
+    }
+
+    &:hover {
+      background-color: #f0f0f0;
+      color: #000;
+    }
+  }
+  .ant-tabs-tab-active {
+    background-color: #fff !important;
+    .ant-tabs-tab-btn {
+      color: #1dbf73 !important;
+    }
+  }
+
+  .ant-tabs-tabpane {
+    padding: 20px;
+    border-radius: 8px;
+  }
+}
+
+.button {
+  color: white;
+  background-color: #1dbf73;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #333;
+  }
+}
+
+.compareLink {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #1dbf73;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: #1dbf73;
+  }
+}
+
+.icon {
+  color: #1dbf73;
+}
+.ant-tabs-nav-list {
+  width: 100%;
+}
+
+.ant-tabs-ink-bar {
+  background-color: #1dbf73 !important;
+}
+.jobPriceTab {
+  position: sticky;
+  top: 70px; /* Điều này giúp Tabs dính vào đầu khi người dùng cuộn */
+  z-index: 100; /* Đảm bảo nó không bị che khuất bởi các phần tử khác */
+}
+
+.abc {
+  position: relative;
+  height: 100%; /* Đảm bảo lớp abc có chiều cao đầy đủ để Tabs có thể dính */
+}
