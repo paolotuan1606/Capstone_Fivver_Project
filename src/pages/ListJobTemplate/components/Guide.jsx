@@ -26,7 +26,7 @@ const Guide = ({ typeJobDetail }) => {
         mouseDrag={false}
         navText={[prevIcon, nextIcon]}
         responsive={{
-          0: { items: 2 }, // Màn hình nhỏ nhất hiển thị 2 items
+          0: { items: 1 }, // Màn hình nhỏ nhất hiển thị 2 items
           768: { items: 2 }, // Màn hình trung bình hiển thị 4 items
           1024: { items: 3 }, // Màn hình lớn hiển thị 6 items
         }}

@@ -11,8 +11,8 @@ const CarouselJobDetail = ({ hinhAnh }) => {
   return (
     <div className="">
       <div className="myClient my-4 pt-4">
-        <div className="myClientContent flex items-center">
-          <div className="w-1/4 flex items-center">
+        <div className="myClientContent lg:flex items-center">
+          <div className="lg:w-1/4 flex items-center">
             <p className="text-gray-950 font-bold mr-2">Among my clients</p>
             <QuestionCircleFilled />
           </div>
@@ -69,7 +69,7 @@ const CarouselJobDetail = ({ hinhAnh }) => {
           </OwlCarousel>
         </div>
       </div>
-      <div className="">
+      <div className="mb-5">
         <div className="w-full overflow-hidden">
           <OwlCarousel
             className="carouselJobImg"
@@ -79,12 +79,12 @@ const CarouselJobDetail = ({ hinhAnh }) => {
             mouseDrag={false}
             navText={[prevIcon, nextIcon]}
           >
-            <div className="gallery_item px-10">
+            <div className="gallery_item lg:px-10">
               <a href={hinhAnh} data-fancybox>
                 <img src={hinhAnh} alt />
               </a>
             </div>
-            <div className="gallery_item px-10">
+            <div className="gallery_item lg:px-10">
               <a
                 href="https://dynamic.design.com/asset/logo/f0af4087-ffa7-453c-86f9-c192e14eb165/logo-search-grid-2x?logoTemplateVersion=1&v=638565286469030000"
                 data-fancybox
@@ -95,7 +95,7 @@ const CarouselJobDetail = ({ hinhAnh }) => {
                 />
               </a>
             </div>
-            <div className="gallery_item px-10">
+            <div className="gallery_item lg:px-10">
               <a
                 href="https://marketplace.canva.com/EAF7cca_2pA/1/0/1600w/canva-black-and-blue-initials-creative-logo-U-z4x7ZUjjs.jpg"
                 data-fancybox
@@ -106,7 +106,7 @@ const CarouselJobDetail = ({ hinhAnh }) => {
                 />
               </a>
             </div>
-            <div className="gallery_item px-10">
+            <div className="gallery_item lg:px-10">
               <a
                 href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimrMUId692F8ytceMnSgzuxqc2GUIAmLxVw&s"
                 data-fancybox
@@ -117,7 +117,7 @@ const CarouselJobDetail = ({ hinhAnh }) => {
                 />
               </a>
             </div>
-            <div className="gallery_item px-10">
+            <div className="gallery_item lg:px-10">
               <a
                 href="https://grehasoft.com/wp-content/uploads/2021/02/logo-designing-kerala.jpg"
                 data-fancybox

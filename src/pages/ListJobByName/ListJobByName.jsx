@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CongViecService } from "../../services/congViec.service";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -252,12 +252,17 @@ const ListJobByName = () => {
                       <div className="space-y-2">
                         {job.dsChiTietLoai.map((item) => {
                           return (
-                            <div className="job-item flex justify-between items-center p-3 hover:bg-gray-100 rounded-md">
+                            <NavLink
+                              to={`/list-job/${
+                                item.id
+                              }?name=${encodeURIComponent(item.tenChiTiet)}`}
+                              className="job-item flex justify-between items-center p-3 hover:bg-gray-100 rounded-md"
+                            >
                               <span className="lg:text-base sm:text-sm">
                                 {item.tenChiTiet}
                               </span>
                               <SwapRightOutlined className="arrow text-black opacity-0 align-middle" />
-                            </div>
+                            </NavLink>
                           );
                         })}
                       </div>
