@@ -19,12 +19,13 @@ const InfoListJob = ({ typeJobDetail }) => {
           <HomeOutlined />
         </NavLink>
         <span>/</span>
-        <NavLink to={location.search}>{typeJobDetail}</NavLink>
+        <NavLink className="hover:underline" to={location.search}>
+          {typeJobDetail}
+        </NavLink>
       </div>
-      <h1 className="text-3xl font-bold ">{typeJobDetail}</h1>
+      <h1 className="text-4xl text-black font-bold ">{typeJobDetail}</h1>
       <p className="text-slate-400">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, omnis
-        nisi esse voluptatem ex aut!
+        Stand out from the crowd with a logo that fits your brand personality.
       </p>
       <h2 className="text-2xl font-bold">Select style</h2>
       <OwlCarousel

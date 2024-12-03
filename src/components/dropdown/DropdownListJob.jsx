@@ -1,6 +1,7 @@
 import { Dropdown, Menu } from "antd";
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import "./DropdownListJob.scss";
 import { pathDefault } from "../../common/path";
 
 const DropdownListJob = ({ dropDownId, dropDownContent, menuGroups }) => {
@@ -9,12 +10,13 @@ const DropdownListJob = ({ dropDownId, dropDownContent, menuGroups }) => {
     key: group.id,
     label: (
       <div className="">
-        <h3 className="font-bold" style={{ marginBottom: "8px" }}>
+        <h3 className="font-bold text-lg" style={{ marginBottom: "8px" }}>
           {group.tenNhom}
         </h3>
         {group.dsChiTietLoai.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} className="text-lg ">
             <NavLink
+              className="hover:text-green-500"
               to={`/list-job/${item.id}?name=${encodeURIComponent(
                 item.tenChiTiet
               )}`}
@@ -36,7 +38,7 @@ const DropdownListJob = ({ dropDownId, dropDownContent, menuGroups }) => {
         };
 
   return (
-    <div className="cursor-pointer">
+    <div className="cursor-pointer dropDownListJob">
       <Dropdown menu={menu}>
         <NavLink
           to={`./list-job-on-kind/${dropDownId}`}

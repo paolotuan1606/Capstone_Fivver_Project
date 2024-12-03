@@ -12,7 +12,7 @@ const TopComment = ({
   return (
     <div className="comments ml-10 my-5">
       <div className=" flex items-center">
-        <img className="w-8 h-8 rounded-full mr-5" src={avatar} alt="" />
+        <img className="w-4 h-4 rounded-full mr-5" src={avatar} alt="" />
         <p className="text-lg font-semibold">
           {tenNguoiBinhLuan}{" "}
           <span className="text-yellow-500">

@@ -33,7 +33,7 @@ const ListJobBarTemplate = () => {
   }, []);
 
   return (
-    <div className="mt-5 sm:container md:container lg:container xl:container 2xl:container">
+    <div className="mt-3 sm:container md:container lg:container xl:container 2xl:container">
       {isLoading ? (
         <p>Đang tải danh sách loại công việc...</p>
       ) : error ? (
@@ -46,7 +46,7 @@ const ListJobBarTemplate = () => {
           autoWidth={true}
           items={7}
           nav={true}
-          margin={30}
+          margin={60}
           dots={false}
           smartSpeed={800}
           loop={false}

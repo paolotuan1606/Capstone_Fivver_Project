@@ -119,7 +119,7 @@ const Faq = () => {
     <div className="mt-10">
       <h3 className="text-2xl font-bold mb-10">FAQ</h3>
       <Collapse size="large" items={items} bordered={false} />
-      <div className="grid grid-cols-2 gap-10 my-5">
+      <div className="flex justify-between">
         <p className="font-semibold">335 Reviews</p>
         <div className="text-right font-semibold">
           <StarFilled className="text-yellow-500" />
@@ -129,6 +129,8 @@ const Faq = () => {
           <StarFilled className="text-yellow-500" />
           4.9
         </div>
+      </div>
+      <div className="md:grid md:grid-cols-2 gap-10 space-y-5 my-5">
         <div className="space-y-6 font-semibold">
           <div className="grid grid-cols-4 gap-5">
             <p className="col-span-1">5 Stars</p>
@@ -138,28 +140,28 @@ const Faq = () => {
             <p>(5,184)</p>
           </div>
           <div className="grid grid-cols-4 gap-5">
-            <p className="col-span-1">5 Stars</p>
+            <p className="col-span-1">4 Stars</p>
             <div className="progress col-span-2">
               <div className="progress-bar progress-bar2"></div>
             </div>
             <p>(5,184)</p>
           </div>
           <div className="grid grid-cols-4 gap-5">
-            <p className="col-span-1">5 Stars</p>
+            <p className="col-span-1">3 Stars</p>
             <div className="progress col-span-2">
               <div className="progress-bar progress-bar3"></div>
             </div>
             <p>(5,184)</p>
           </div>
           <div className="grid grid-cols-4 gap-5">
-            <p className="col-span-1">5 Stars</p>
+            <p className="col-span-1">2 Stars</p>
             <div className="progress col-span-2">
               <div className="progress-bar progress-bar4"></div>
             </div>
             <p>(5,184)</p>
           </div>
           <div className="grid grid-cols-4 gap-5">
-            <p className="col-span-1">5 Stars</p>
+            <p className="col-span-1">1 Stars</p>
             <div className="progress col-span-2">
               <div className="progress-bar progress-bar5"></div>
             </div>
