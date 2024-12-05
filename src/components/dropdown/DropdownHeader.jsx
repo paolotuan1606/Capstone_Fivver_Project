@@ -1,16 +1,18 @@
 import { Dropdown, Space } from "antd";
 import React, { useState } from "react";
-import { DownOutlined, SmileOutlined } from "@ant-design/icons";
+import { DownOutlined } from "@ant-design/icons";
 
 const DropdownHeader = ({ buttonContent = "Fiverr Pro", items }) => {
   const [open, setOpen] = useState(false);
-  // console.log(open)
+
+  // Cấu trúc items mới cho Dropdown
+  const dropdownItems = items.map((item) => ({
+    label: item.label,
+    key: item.key,
+  }));
+
   return (
-    <Dropdown
-      menu={{ items: [{ label: "avbc" }] }}
-      trigger={["click"]}
-      open={open}
-    >
+    <Dropdown menu={{ items: dropdownItems }} trigger={["click"]} open={open}>
       <button
         onClick={() => {
           setOpen(!open);

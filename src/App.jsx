@@ -10,6 +10,7 @@ import ListJobTemplate from "./pages/ListJobTemplate/ListJobTemplate";
 import JobDetailTemPlate from "./pages/JobDetailTemplate/JobDetailTemplate";
 import BodyTemplate from "./templates/HomeTemplate/components/BodyTemplate/BodyTemplate";
 import ListJobByName from "./pages/ListJobByName/ListJobByName";
+import ScrollToTop from "react-scroll-to-top";
 
 export const NotificationContext = createContext();
 
@@ -130,6 +131,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop smooth />
       <NotificationContext.Provider value={handleNotification}>
         {routes}
         <ToastContainer />
