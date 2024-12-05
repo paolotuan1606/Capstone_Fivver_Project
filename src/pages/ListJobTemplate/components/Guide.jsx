@@ -8,7 +8,7 @@ const Guide = ({ typeJobDetail }) => {
   const nextIcon = `<i class="fa-solid fa-angle-right"></i>`;
   const prevIcon = `<i class="fa-solid fa-angle-left"></i>`;
   return (
-    <div className="sm:container md:container lg:container xl:container 2xl:container ">
+    <div className="sm:container md:container lg:container xl:container 2xl:container mx-5">
       <div className="flex items-baseline justify-between">
         <h1 className="md:text-4xl sm:text-2xl font-bold">
           Guides related to {typeJobDetail}

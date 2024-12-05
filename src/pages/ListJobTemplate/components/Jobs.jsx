@@ -44,7 +44,7 @@ const Jobs = ({ jobID }) => {
   };
 
   return (
-    <div className="container py-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+    <div className="sm:container md:container lg:container xl:container 2xl:container mx-5 py-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 ">
       {listJob.map((job) => (
         <NavLink className="typeJobDetail" to={`/job/${job.id}`} key={job.id}>
           <div className="jobImg mb-5">

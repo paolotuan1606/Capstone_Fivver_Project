@@ -4,7 +4,7 @@ import { Button } from "antd";
 
 const Explore = ({ typeJobDetail }) => {
   return (
-    <div className="exploreContent sm:container md:container lg:container xl:container 2xl:container py-10 space-y-7 items-center">
+    <div className="exploreContent sm:container md:container lg:container xl:container 2xl:container py-10 space-y-7 items-center mx-5">
       <div className="exploreItem space-y-7">
         <h2 className="text-center text-4xl font-bold">
           Explore More {typeJobDetail} Services

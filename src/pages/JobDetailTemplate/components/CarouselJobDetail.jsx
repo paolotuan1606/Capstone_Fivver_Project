@@ -81,7 +81,7 @@ const CarouselJobDetail = ({ hinhAnh }) => {
           >
             <div className="gallery_item lg:px-10">
               <a href={hinhAnh} data-fancybox>
-                <img src={hinhAnh} alt />
+                <img className="w-96 h-96 " src={hinhAnh} alt />
               </a>
             </div>
             <div className="gallery_item lg:px-10">
@@ -90,6 +90,7 @@ const CarouselJobDetail = ({ hinhAnh }) => {
                 data-fancybox
               >
                 <img
+                  className="w-96 h-96 "
                   src="https://dynamic.design.com/asset/logo/f0af4087-ffa7-453c-86f9-c192e14eb165/logo-search-grid-2x?logoTemplateVersion=1&v=638565286469030000"
                   alt
                 />
@@ -101,6 +102,7 @@ const CarouselJobDetail = ({ hinhAnh }) => {
                 data-fancybox
               >
                 <img
+                  className="w-96 h-96 "
                   src="https://marketplace.canva.com/EAF7cca_2pA/1/0/1600w/canva-black-and-blue-initials-creative-logo-U-z4x7ZUjjs.jpg"
                   alt
                 />
@@ -112,6 +114,7 @@ const CarouselJobDetail = ({ hinhAnh }) => {
                 data-fancybox
               >
                 <img
+                  className="w-96 h-96 "
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimrMUId692F8ytceMnSgzuxqc2GUIAmLxVw&s"
                   alt
                 />
@@ -123,6 +126,7 @@ const CarouselJobDetail = ({ hinhAnh }) => {
                 data-fancybox
               >
                 <img
+                  className="w-96 h-96 "
                   src="https://grehasoft.com/wp-content/uploads/2021/02/logo-designing-kerala.jpg"
                   alt
                 />

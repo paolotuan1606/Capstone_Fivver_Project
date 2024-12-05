@@ -31,8 +31,14 @@
   background: none !important;
 }
 .ant-dropdown-menu-item {
-  cursor: unset !important;
   a {
     color: black;
+  }
+}
+
+.owl-carousel {
+  .owl-item {
+    display: inline-block !important; /* Ngăn không cho các item xuống dòng */
+    white-space: nowrap; /* Ngăn ngắt dòng */
   }
 }

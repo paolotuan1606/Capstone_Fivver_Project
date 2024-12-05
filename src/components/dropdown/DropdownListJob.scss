@@ -12,15 +12,3 @@
     background-color: #1dbf73; /* Màu của thanh ngang */
   }
 }
-.ant-dropdown {
-  .ant-dropdown-menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 836px) {
-    .ant-dropdown-menu {
-      display: block; /* Hoặc flex nếu bạn muốn */
-    }
-  }
-}

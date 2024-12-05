@@ -7,6 +7,12 @@
           padding: 10px 20px;
           border: 1px solid rgba(128, 128, 128, 0.471);
           border-radius: 10px;
+          &:hover {
+            background-color: rgba(128, 128, 128, 0.205);
+          }
+        }
+        .dropdownContent {
+          background-color: white;
         }
       }
       .ant-switch-checked {
@@ -26,5 +32,13 @@
 
   .resultSelling {
     justify-content: space-between;
+  }
+}
+.btnDropdown {
+  padding: 10px 20px;
+  border: 1px solid rgba(128, 128, 128, 0.471);
+  border-radius: 10px;
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.205);
   }
 }

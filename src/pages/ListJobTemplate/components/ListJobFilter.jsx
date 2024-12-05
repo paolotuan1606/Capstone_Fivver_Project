@@ -8,7 +8,7 @@ const ListJobFilter = () => {
   const [isSticky, setIsSticky] = useState(false); // Trạng thái dính
 
   const toggleDropdown = (dropdown) => {
-    setVisibleDropdown(visibleDropdown === dropdown ? null : dropdown);
+    setVisibleDropdown(visibleDropdown === dropdown ? null : dropdown); // Tạo hiệu ứng toggle
   };
 
   // Hàm xử lý khi cuộn chuột
@@ -32,9 +32,9 @@ const ListJobFilter = () => {
   }, []);
 
   return (
-    <div className="ListJobFilter sm:container md:container lg:container xl:container 2xl:container ">
+    <div className="ListJobFilter sm:container md:container lg:container xl:container 2xl:container mx-5">
       <div className={`ListJobFilterContent  ${isSticky ? "sticky" : ""}`}>
-        <div className="ListJobFilterContent2 sm:container md:container lg:container xl:container 2xl:container py-7 space-y-7 sm:space-y-3 md:space-y-3 lg:space-y-3 xl:flex items-center">
+        <div className="ListJobFilterContent2 sm:container md:container lg:container xl:container 2xl:container py-7 space-y-7 sm:space-y-3 md:space-y-3 lg:space-y-3 xl:flex items-center mx-5">
           <div className="menuContentLeft flex items-center space-x-4">
             <div className="relative">
               <button
@@ -43,11 +43,6 @@ const ListJobFilter = () => {
               >
                 <span>Logo options</span> <DownOutlined />
               </button>
-              {visibleDropdown === "logoOptions" && (
-                <div className="dropdownContent absolute bg-white border shadow-md p-4">
-                  Nội dung Logo options
-                </div>
-              )}
             </div>
             <div className="relative">
               <button
@@ -56,11 +51,6 @@ const ListJobFilter = () => {
               >
                 <span>Seller details</span> <DownOutlined />
               </button>
-              {visibleDropdown === "sellerDetails" && (
-                <div className="dropdownContent absolute bg-white border shadow-md p-4">
-                  Nội dung Seller details
-                </div>
-              )}
             </div>
             <div className="relative">
               <button
@@ -69,11 +59,6 @@ const ListJobFilter = () => {
               >
                 <span>Budget</span> <DownOutlined />
               </button>
-              {visibleDropdown === "budget" && (
-                <div className="dropdownContent absolute bg-white border shadow-md p-4">
-                  Nội dung Budget
-                </div>
-              )}
             </div>
             <div className="relative">
               <button
@@ -82,11 +67,6 @@ const ListJobFilter = () => {
               >
                 <span>Delivery time</span> <DownOutlined />
               </button>
-              {visibleDropdown === "deliveryTime" && (
-                <div className="dropdownContent absolute bg-white border shadow-md p-4">
-                  Nội dung Delivery time
-                </div>
-              )}
             </div>
           </div>
           <div className="serviceRight flex items-center space-x-3">
@@ -106,11 +86,6 @@ const ListJobFilter = () => {
             >
               <span>Best selling</span> <DownOutlined />
             </button>
-            {visibleDropdown === "bestSelling" && (
-              <div className="dropdownContent absolute bg-white border shadow-md p-4">
-                Nội dung Logo options
-              </div>
-            )}
           </div>
         </div>
       </div>

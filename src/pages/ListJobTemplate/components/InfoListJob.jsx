@@ -13,7 +13,7 @@ const InfoListJob = ({ typeJobDetail }) => {
   const nextIcon = `<i class="fa-solid fa-angle-right"></i>`;
   const prevIcon = `<i class="fa-solid fa-angle-left"></i>`;
   return (
-    <div className="infoListJob sm:container md:container lg:container xl:container 2xl:container py-7 space-y-7">
+    <div className="infoListJob sm:container md:container lg:container xl:container 2xl:container py-7 space-y-7 mx-5">
       <div className="space-x-4">
         <NavLink to={pathDefault.homePage}>
           <HomeOutlined />

@@ -12,7 +12,7 @@ import "./bodyTemplate.scss";
 
 const BodyTemplate = () => {
   return (
-    <div className="container-xl mx-10 mt-10">
+    <div className="sm:container md:container lg:container xl:container 2xl:container mx-5 mt-10">
       <HeadBanner />
       <JobItemCart />
       <PopularService />

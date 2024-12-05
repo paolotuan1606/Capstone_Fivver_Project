@@ -46,7 +46,7 @@ const ListJobBarTemplate = () => {
           autoWidth={true}
           items={7}
           nav={true}
-          margin={60}
+          margin={80}
           dots={false}
           smartSpeed={800}
           loop={false}
@@ -54,7 +54,7 @@ const ListJobBarTemplate = () => {
           navText={[prevIcon, nextIcon]}
         >
           {listLoaiCongViec.map((loaiCongViec) => (
-            <div key={loaiCongViec.id} className="item text-lg">
+            <div key={loaiCongViec.id} className="item text-base">
               <DropdownListJob
                 dropDownId={loaiCongViec.id}
                 dropDownContent={loaiCongViec.tenLoaiCongViec}
