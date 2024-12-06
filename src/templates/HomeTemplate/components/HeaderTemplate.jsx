@@ -116,6 +116,13 @@ const HeaderTemplate = () => {
   const handleChangeKey = (event) => {
     setKey(event.target.value);
   };
+  const handleSearchSubmit = (e) => {
+    e.preventDefault(); // Ngăn hành vi mặc định của form
+    if (key.trim()) {
+      navigate(`/list-job-search/search?name=${key}`);
+      setOpenDropdown(false); // Đóng dropdown nếu đang mở
+    }
+  };
 
   useEffect(() => {
     if (value) {
@@ -184,7 +191,7 @@ const HeaderTemplate = () => {
           isScrolled && isHomePage ? "fixed top-0 left-0 right-0 shadow-md" : ""
         }`}
       >
-        <div className="container 2xl:container">
+        <div className="sm:container md:container lg:container xl:container 2xl:container mx-5">
           <div className="header_content flex items-center justify-between">
             {/* Logo and Search Bar */}
             <div className="flex flex-1 space-x-2 items-center">
@@ -201,14 +208,14 @@ const HeaderTemplate = () => {
                 }}
                 open={openDropdown}
               >
-                <div className="w-full">
+                <form onSubmit={handleSearchSubmit} className="w-full">
                   <InputSearch
                     handleClick={() => setOpenDropdown(true)}
                     handleChange={handleChangeKey}
                     value={key}
-                    placeholder={"What service are you looking for today?"}
+                    placeholder="What service are you looking for today?"
                   />
-                </div>
+                </form>
               </Dropdown>
             </div>
 
@@ -223,16 +230,56 @@ const HeaderTemplate = () => {
             {/* Authentication */}
             {!user ? (
               <div className="inline">
-                <ButtonGhost content={"Sign In"} />
-                <ButtonOutline
+                <ButtonGhost
                   onClick={() => {
                     navigate(pathDefault.signIn);
+                  }}
+                  content={"Sign In"}
+                />
+                <ButtonOutline
+                  onClick={() => {
+                    navigate(pathDefault.signUp);
                   }}
                   content={"Join"}
                 />
               </div>
             ) : (
-              <Avatar size={50} icon={<UserOutlined />} />
+              <Dropdown
+                menu={{
+                  items: [
+                    {
+                      key: "userInfo",
+                      label: (
+                        <div
+                          onClick={() => navigate(pathDefault.userInfo)}
+                          className="py-2 px-4 cursor-pointer hover:bg-gray-100"
+                        >
+                          <h1 className="font-semibold text-base">Info</h1>
+                        </div>
+                      ),
+                    },
+                    {
+                      key: "signOut",
+                      label: (
+                        <div
+                          onClick={() => {
+                            // Xử lý đăng xuất (xóa thông tin người dùng từ localStorage)
+                            localStorage.removeItem("userInfo");
+
+                            // Tải lại trang hiện tại
+                            window.location.reload(); // Reload trang hiện tại
+                          }}
+                          className="py-2 px-4 cursor-pointer hover:bg-gray-100"
+                        >
+                          <h1 className="font-semibold text-base">Đăng xuất</h1>
+                        </div>
+                      ),
+                    },
+                  ],
+                }}
+              >
+                <Avatar size={50} icon={<UserOutlined />} />
+              </Dropdown>
             )}
           </div>
         </div>
@@ -262,7 +309,7 @@ const HeaderTemplate = () => {
           isScrolled && isHomePage ? "fixed top-0 left-0 right-0 shadow-md" : ""
         }`}
       >
-        <div className="container 2xl:container">
+        <div className="sm:container md:container lg:container xl:container 2xl:container mx-5">
           <div className="header_content flex items-center justify-between">
             {/* Logo and Sidebar Toggle Button */}
             <div className="flex items-center">
@@ -281,16 +328,58 @@ const HeaderTemplate = () => {
             <div className="ml-auto flex items-center">
               {!user ? (
                 <div className="inline">
-                  <ButtonGhost content={"Sign In"} />
-                  <ButtonOutline
+                  <ButtonGhost
                     onClick={() => {
                       navigate(pathDefault.signIn);
+                    }}
+                    content={"Sign In"}
+                  />
+                  <ButtonOutline
+                    onClick={() => {
+                      navigate(pathDefault.signUp);
                     }}
                     content={"Join"}
                   />
                 </div>
               ) : (
-                <Avatar size={50} icon={<UserOutlined />} />
+                <Dropdown
+                  menu={{
+                    items: [
+                      {
+                        key: "userInfo",
+                        label: (
+                          <div
+                            onClick={() => navigate(pathDefault.userInfo)}
+                            className="py-2 px-4 cursor-pointer hover:bg-gray-100"
+                          >
+                            <h1 className="font-semibold text-base">Info</h1>
+                          </div>
+                        ),
+                      },
+                      {
+                        key: "signOut",
+                        label: (
+                          <div
+                            onClick={() => {
+                              // Xử lý đăng xuất (xóa thông tin người dùng từ localStorage)
+                              localStorage.removeItem("userInfo");
+
+                              // Tải lại trang hiện tại
+                              window.location.reload(); // Reload trang hiện tại
+                            }}
+                            className="py-2 px-4 cursor-pointer hover:bg-gray-100"
+                          >
+                            <h1 className="font-semibold text-base">
+                              Đăng xuất
+                            </h1>
+                          </div>
+                        ),
+                      },
+                    ],
+                  }}
+                >
+                  <Avatar size={50} icon={<UserOutlined />} />
+                </Dropdown>
               )}
             </div>
           </div>

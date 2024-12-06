@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./ListJobFilter.scss";
 import { Switch } from "antd";
 
-const ListJobFilter = () => {
+const ListJobFilter = ({ result = `170,000` }) => {
   const [visibleDropdown, setVisibleDropdown] = useState(null);
   const [isSticky, setIsSticky] = useState(false); // Trạng thái dính
 
@@ -76,7 +76,7 @@ const ListJobFilter = () => {
         </div>
       </div>
       <div className="resultSelling flex items-center">
-        <p>170,000+ result</p>
+        <p>{result}+ result</p>
         <div className="dropdownSelling flex items-center">
           <span className="mr-3">Sort by: </span>
           <div className="relative">

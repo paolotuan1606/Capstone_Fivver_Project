@@ -1,6 +1,7 @@
-export const ButtonGhost = ({ content, icon, type = "button" }) => {
+export const ButtonGhost = ({ onClick, content, icon, type = "button" }) => {
   return (
     <button
+      onClick={onClick}
       type={type}
       className="py-2 px-4 hover:text-green-600 hover:bg-inherit duration-200"
     >

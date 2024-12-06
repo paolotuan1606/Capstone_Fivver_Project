@@ -5,19 +5,27 @@ import { CongViecService } from "../../../../../../services/congViec.service";
 import Icons from "../../../../../../components/Icons";
 import InputSearch from "../../../../../../components/input/inputSearch/InputSearch";
 import "./headBanner.scss";
+import { useNavigate } from "react-router-dom";
 
 const HeadBanner = () => {
   const [key, setKey] = useState("");
   const [value] = useDebounce(key, 1000);
   const [openDropdown, setOpenDropdown] = useState(false);
   const [listSearch, setListSearch] = useState([]);
+  const navigate = useNavigate(); // Use navigate, not Navigate
+
   const handleChangeKey = (event) => {
     setKey(event.target.value);
   };
 
-  const handleClick = () => {
-    setOpenDropdown(true);
+  const handleSearchSubmit = (e) => {
+    e.preventDefault(); // Ngăn hành vi mặc định của form
+    if (key.trim()) {
+      navigate(`/list-job-search/search?name=${key}`); // Fix usage of Navigate
+      setOpenDropdown(false); // Đóng dropdown nếu đang mở
+    }
   };
+
   useEffect(() => {
     if (value) {
       CongViecService.getCongViecTheoTen(value)
@@ -31,8 +39,9 @@ const HeadBanner = () => {
         });
     }
   }, [value]);
+
   const itemListSearch = useMemo(() => {
-    return listSearch.slice(0, 4).map((item, index) => {
+    return listSearch.slice(0, 4).map((item) => {
       return {
         key: item.id,
         label: (
@@ -43,17 +52,22 @@ const HeadBanner = () => {
               alt=""
             />
             <div>
-              <h4 className="">{item.congViec.tenCongViec}</h4>
+              <h4>{item.congViec.tenCongViec}</h4>
               <p>{item.congViec.danhGia}</p>
             </div>
           </div>
         ),
+        onClick: () => {
+          navigate(`/list-job-search/search?name=${item.congViec.tenCongViec}`);
+          setOpenDropdown(false); // Đóng dropdown khi chọn item
+        },
       };
     });
   }, [listSearch]);
+
   return (
-    <div className="banner rounded-2xl  ">
-      <div className="head_banner text-center h-3/4 text-white flex justify-center items-center ">
+    <div className="banner rounded-2xl">
+      <div className="head_banner text-center h-3/4 text-white flex justify-center items-center">
         <div className="md:space-y-12 sm:space-y-3">
           <h1 className="lg:text-6xl md:text-5xl sm:text-2xl">
             Scale your professional <br /> workforce with
@@ -69,21 +83,21 @@ const HeadBanner = () => {
             }}
             open={openDropdown}
           >
-            <div className="w-full">
+            <form onSubmit={handleSearchSubmit} className="w-full">
               <InputSearch
-                handleClick={handleClick}
+                handleClick={() => setOpenDropdown(true)}
                 handleChange={handleChangeKey}
                 value={key}
-                placeholder={"Search for any service..."}
+                placeholder="What service are you looking for today?"
               />
-            </div>
+            </form>
           </Dropdown>
         </div>
       </div>
-      <div className="banner-logo h-1/4  text-gray-500 flex justify-center lg:gap-5 sm:gap-2">
+      <div className="banner-logo h-1/4 text-gray-500 flex justify-center lg:gap-5 sm:gap-2">
         <span className="flex items-center sm:text-sm">Trusted by:</span>
-        <ul className="flex items-center lg:gap-5 md:gap-4 ">
-          <li className=" text-gray-500">
+        <ul className="flex items-center lg:gap-5 md:gap-4">
+          <li className="text-gray-500">
             <Icons.meta />
           </li>
           <li>

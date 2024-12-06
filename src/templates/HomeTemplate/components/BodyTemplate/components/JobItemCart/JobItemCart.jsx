@@ -3,7 +3,7 @@ import ItemCart from "./ItemCart/ItemCart";
 
 const JobItemCart = () => {
   return (
-    <div className=" my-5 flex gap-3 sm:flex-wrap">
+    <div className=" my-5 grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-9 gap-3 mx-5">
       <ItemCart
         img="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/programming-tech-thin.56382a2.svg"
         content={"Programing & Tech"}
