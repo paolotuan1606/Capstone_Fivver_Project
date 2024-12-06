@@ -13,7 +13,9 @@ import { authService } from "../../services/auth.service";
 import { NotificationContext } from "../../App";
 import { useDispatch } from "react-redux";
 import { handleUpdateUser } from "../../redux/slice/user.slice";
+import useViewPort from "../../hooks/useViewPort";
 const SignIn = () => {
+  const { width } = useViewPort();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleNotification = useContext(NotificationContext);
@@ -64,25 +66,35 @@ const SignIn = () => {
     },
   };
   return (
-    <div className="h-screen grid grid-cols-3 py-10">
-      <div className="signIn_animation col-span-2 h-full flex items-center ">
-        {/* animation */}
-        <Lottie options={defaultOptions} height={700} width={700} />
-      </div>
-      <div className="signIn_form h-full px-10 flex flex-col justify-between">
-        {/* logo and back to homepage  */}
-        <div className="flex justify-between items-center">
-          <Icons.logo />
-          <Link to={pathDefault.homePage}>
-            <ArrowLeftOutlined className="mr-2" />
-            Go back
-          </Link>
-        </div>
-        {/* form  */}
-        <div>
+    <div className="h-screen py-10">
+      <div className="grid md:grid-cols-3 gap-0">
+        {/* Nếu màn hình rộng > 1024px, hiển thị Lottie */}
+        {width > 1024 && (
+          <div className="signIn_animation col-span-2 h-full flex items-center justify-center">
+            <Lottie options={defaultOptions} height={700} width={700} />
+          </div>
+        )}
+
+        {/* Form đăng nhập, căn giữa trong màn hình nhỏ */}
+        <div
+          className={`signIn_form h-full px-10 flex flex-col justify-center ${
+            width <= 1024 ? "items-center" : ""
+          }`}
+        >
+          {/* logo và back to homepage */}
+          <div className="flex justify-between items-center">
+            <Icons.logo />
+            <Link to={pathDefault.homePage}>
+              <ArrowLeftOutlined className="mr-2" />
+              Go back
+            </Link>
+          </div>
+
+          {/* form đăng nhập */}
           <h1 className="font-semibold text-4xl mb-2">Trang đăng nhập</h1>
           <p className="text-gray-400 mb-4">Nhập email để bắt đầu truy cập</p>
-          <form onSubmit={handleSubmit} className="space-y-4">
+
+          <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md">
             <div>
               <label htmlFor="">Email</label>
               <Input
@@ -117,18 +129,19 @@ const SignIn = () => {
               />
             </div>
           </form>
-        </div>
-        {/* đăng ký  */}
-        <div className="text-center">
-          <span>
-            Chưa có tài khoản?{" "}
-            <Link
-              to={pathDefault.signUp}
-              className="font-medium hover:underline duration-200"
-            >
-              Đăng ký tại đây
-            </Link>
-          </span>
+
+          {/* Đăng ký */}
+          <div className="text-center mt-4">
+            <span>
+              Chưa có tài khoản?{" "}
+              <Link
+                to={pathDefault.signUp}
+                className="font-medium hover:underline duration-200"
+              >
+                Đăng ký tại đây
+              </Link>
+            </span>
+          </div>
         </div>
       </div>
     </div>

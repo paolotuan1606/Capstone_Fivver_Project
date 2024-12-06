@@ -11,6 +11,8 @@ import JobDetailTemPlate from "./pages/JobDetailTemplate/JobDetailTemplate";
 import BodyTemplate from "./templates/HomeTemplate/components/BodyTemplate/BodyTemplate";
 import ListJobByName from "./pages/ListJobByName/ListJobByName";
 import ScrollToTop from "react-scroll-to-top";
+import ListJobSearch from "./pages/ListJobSearch/ListJobSearch";
+import SignUp from "./pages/SignUp/SignUp";
 
 export const NotificationContext = createContext();
 
@@ -37,6 +39,14 @@ const arrRoutes = [
         element: (
           <Suspense>
             <BodyTemplate />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/list-job-search/:jobName",
+        element: (
+          <Suspense>
+            <ListJobSearch />
           </Suspense>
         ),
       },
@@ -69,6 +79,10 @@ const arrRoutes = [
   {
     path: pathDefault.signIn,
     element: <SignIn />,
+  },
+  {
+    path: pathDefault.signUp,
+    element: <SignUp />,
   },
   {
     path: pathDefault.admin,

@@ -77,7 +77,7 @@ const Jobs = ({ jobID }) => {
           </p>
           <div className="flex justify-between items-center">
             <p className="text-lg font-semibold text-green-600 ">
-              From {job.congViec.giaTien}
+              From US${job.congViec.giaTien}
             </p>
             <div className="typeJobDetail_icon  space-x-5 text-right mr-5">
               <Button className="icon iconLike text-xl" href="#">
