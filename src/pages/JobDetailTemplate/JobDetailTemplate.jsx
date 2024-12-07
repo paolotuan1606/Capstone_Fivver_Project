@@ -49,7 +49,7 @@ const JobDetailTemplate = () => {
     if (newComment.trim()) {
       const commentData = {
         maCongViec: jobid,
-        maNguoiBinhLuan: 6564, // Giả sử đây là ID của người dùng (thay thế theo logic của bạn)
+        maNguoiBinhLuan: 1, // Giả sử đây là ID của người dùng (thay thế theo logic của bạn)
         ngayBinhLuan: new Date().toISOString(), // Lấy ngày hiện tại
         noiDung: newComment,
         saoBinhLuan: 5, // Mặc định sao bình luận là 5
